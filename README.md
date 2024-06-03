@@ -1,2 +1,2 @@
 # passinfo
-For storing important information and passwords (securely ofc, i hope)
+A simple--and probably--secure, password manager extension and data storage app (so you can keep your backtalk behind an encrypted db) :)
