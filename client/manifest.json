@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "Passinfo",
+  "description": "Manage your passwords, free and simple (idk how secure it is tho)",
+  "version": "1",
+  "author": "crazeddd",
+  "browser_action": {
+    "default_popup": "dist/index.html",
+    "default_icon": {
+      "19": "src/assets/icon_stock.png",
+      "38": "src/assets/icon_stock.png"
+    }
+  }
+}

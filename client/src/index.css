@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css?family=Outfit:700|Poppins:400");
+
+:root {
+  --text: hsl(0, 0%, 89%);
+  --muted: hsla(0, 0%, 89%, 0.5);
+  --background: hsla(247, 25%, 8%, 1);
+  --primary: #5bc0be;
+  --secondary: hsla(222.14, 100%, 83.53%, 0.05);
+  --accent: #6fffe9;
+  --positive: #80ed99;
+  --negative: #ff6863;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4rem;
+  overflow-x: hidden;
+  font-family: "Poppins";
+  font-weight: 400;
+  color: var(--text);
+  padding: 5rem 10vw 5rem 10vw;
+  background: var(--background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Outfit";
+  font-weight: 700;
+  color: var(--text);
+}
+
+html {
+  font-size: 100%;
+}
+
+/* 16px */
+
+h1 {
+  font-size: 4.21rem;
+  /* 67.36px */
+}
+
+h2 {
+  font-size: 3.158rem;
+  /* 50.56px */
+}
+
+h3 {
+  font-size: 2.369rem;
+  /* 37.92px */
+}
+
+h4 {
+  font-size: 1.777rem;
+  /* 28.48px */
+}
+
+h5 {
+  font-size: 1.333rem;
+  /* 21.28px */
+}
+
+small {
+  font-size: 0.75rem;
+  /* 12px */
+}
+
+p,
+a {
+  font-size: 0.9rem;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+span {
+  color: var(--text);
+}
+
+button,
+input {
+  outline: none;
+}
+
+hr {
+  border: 1px solid var(--muted);
+}
+
+tag {
+  border-radius: 0.25rem;
+  padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+  color: var(--text);
+  font-size: 0.8rem;
+  vertical-align: baseline;
+  display: inline-block;
+}
+
+tag.primary {
+  border: 1px solid var(--primary);
+  color: var(--text);
+  background: none;
+}
+
+tag.secondary {
+  color: var(--muted);
+}
+
+tag.positive {
+  background: var(--positive);
+  color: var(--background);
+}
+
+svg {
+  fill: var(--text);
+  height: 1lh;
+  width: 1lh;
+  vertical-align: middle;
+  align-self: center;
+}
+
+svg.small {
+  font-size: 0.8rem;
+  transition: 0.2s ease-in-out;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  color: var(--text);
+  border-radius: 0.5rem;
+  border: none;
+  background: none;
+  font-size: 0.8rem;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+img {
+  object-fit: contain;
+  height: auto;
+  width: 100%;
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+input {
+  width: 100%;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  padding: 1rem;
+  background: var(--secondary);
+  color: var(--text);
+  border: none;
+}
+
+form {
+  display: flex;
+  padding: 2.5rem;
+  border-radius: 0.75rem;
+}
+
+.auth-form {
+  width: 25rem;
+  background: var(--secondary);
+  backdrop-filter: blur(0.1rem);
+}
+
+.primary {
+  background: linear-gradient(114deg, var(--primary), var(--accent));
+  color: var(--background);
+}
+
+.primary svg {
+  fill: var(--background);
+}
+
+.secondary {
+  background: var(--secondary);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.gp-1 {
+  gap: 2rem;
+}
+
+.gp-2 {
+  gap: 1rem;
+}
+
+.gp-3 {
+  gap: 0.5rem;
+}
+
+.center {
+  align-items: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.text-overlay {
+  position: absolute;
+  right: 45%;
+  top: 36.5%;
+  background: #181727;
+  padding: 0 5% 0 5%;
+}
+
+.text-overlay-2 {
+  position: absolute;
+  right: 45%;
+  top: 49.4%;
+  background: #181727;
+  padding: 0 5% 0 5%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
