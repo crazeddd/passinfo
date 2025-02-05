@@ -80,9 +80,9 @@ export const login = async (req: Request, res: Response) => {
         userName: user.username,
       },
       "superdupersecrettoken",
-      { 
+      {
         algorithm: 'HS256',
-        expiresIn: "24h" 
+        expiresIn: "24h"
       }
     );
 

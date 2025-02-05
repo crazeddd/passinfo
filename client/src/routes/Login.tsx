@@ -2,14 +2,14 @@ import { useForm } from "../utils/useForm";
 import { useNavigate } from "@solidjs/router";
 //import { handleFetch } from "../utils/errorHandler";
 
-function Login() {
+export default function Login() {
   const formFields = { username: "", password: "" };
   const { form, handleChange } = useForm(formFields);
   const navigate = useNavigate();
 
   const handleSubmit = (e: Event): void => {
     e.preventDefault();
-    fetch("http://localhost:8080/users/login", {
+    fetch("https://literate-succotash-46xwrx49j6r2j4j9-8080.app.github.dev/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -27,6 +27,9 @@ function Login() {
           localStorage.setItem('token', data.token);
           navigate("/dashboard");
         }
+      })
+      .catch((err) => {
+        console.log(`Unexpected error when fetching (${err})`);
       });
   };
 
@@ -76,5 +79,3 @@ function Login() {
     </form>
   );
 }
-
-export default Login;

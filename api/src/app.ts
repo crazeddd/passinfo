@@ -13,7 +13,7 @@ import usersRouter from "./routes/users";
 var app = express();
 
 const corsConfig = {
-  origin: "http://localhost:3000",
+  origin: ["http://localhost:3000", "https://literate-succotash-46xwrx49j6r2j4j9-3000.app.github.dev"],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 };
 

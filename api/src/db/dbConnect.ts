@@ -3,8 +3,7 @@ import "dotenv/config";
 
 async function dbConnect() {
   mongoose
-    // @ts-ignore (no idea why env types arent working)
-    .connect(process.env.DB_ENDPOINT, {})
+    .connect("mongodb://admin:password@localhost:27017/main?authSource=admin", {})
     .then(() => {
       console.log("Successfully connected to database");
     })

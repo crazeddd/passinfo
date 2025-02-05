@@ -1,13 +1,16 @@
 import { useForm } from "../utils/useForm";
+import { useNavigate } from "@solidjs/router";
 //import { handleFetch } from "../utils/errorHandler";
 
-function SignUp() {
+export default function SignUp() {
   const formFields = { username: "", password: "" };
   const { form, handleChange } = useForm(formFields);
 
+  const navigate = useNavigate();
+
   const handleSubmit = (e: Event): void => {
     e.preventDefault();
-    fetch("http://localhost:8080/users/signup", {
+    fetch("https://literate-succotash-46xwrx49j6r2j4j9-8080.app.github.dev/users/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -20,8 +23,12 @@ function SignUp() {
           JSON.stringify(console.error(data.message));
         } else {
           JSON.stringify(console.log(data.message));
+          navigate("/login");
         }
-      });
+      })
+      .catch((err) => {
+        console.log(`Unexpected error when fetching (${err})`);
+      })
   };
 
   return (
@@ -51,6 +58,7 @@ function SignUp() {
         <input
           id="username"
           name="username"
+          type="text"
           value={form.username}
           placeholder="Username"
           onChange={handleChange}
@@ -58,6 +66,7 @@ function SignUp() {
         <input
           id="password"
           name="password"
+          type="password"
           value={form.password}
           placeholder="Password"
           onChange={handleChange}
@@ -92,5 +101,3 @@ function SignUp() {
         </form>
       </header>
     </div>**/
-
-export default SignUp;
