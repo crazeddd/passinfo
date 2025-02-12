@@ -3,7 +3,6 @@ import cookieParser from "cookie-parser";
 import logger from "morgan";
 import cors from "cors";
 import mongoSanitize from "express-mongo-sanitize";
-import { join } from "path";
 
 import dbConnect from "./db/dbConnect";
 
@@ -23,7 +22,6 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(express.static(join("public")));
 
 app.use(
   mongoSanitize({ 

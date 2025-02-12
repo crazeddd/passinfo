@@ -1,4 +1,4 @@
-import e, { Request, Response } from "express";
+import type { Request, Response } from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import User from "../db/userModel";
@@ -74,7 +74,7 @@ export const login = async (req: Request, res: Response) => {
       throw new Error("Incorrect password");
     });
 
-    const token = jwt.sign(
+    const token: {} = jwt.sign(
       {
         userId: user._id,
         userName: user.username,

@@ -1,6 +1,11 @@
 import mongoose from "mongoose";
 
-const UserSchema = new mongoose.Schema({
+export interface UserSchema extends mongoose.Schema {
+  username: string;
+  password: string;
+}
+
+const UserSchema = new mongoose.Schema<UserSchema>({
   username: {
     type: String,
     required: [true, "please provide a username"],

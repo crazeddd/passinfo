@@ -25,6 +25,7 @@ body {
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: center;
+  align-items: center;
   gap: 4rem;
   overflow-x: hidden;
   font-family: "Poppins";

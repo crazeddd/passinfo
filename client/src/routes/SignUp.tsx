@@ -27,7 +27,7 @@ export default function SignUp() {
         }
       })
       .catch((err) => {
-        console.log(`Unexpected error when fetching (${err})`);
+        console.error(`Unexpected error when fetching (${err})`);
       })
   };
 

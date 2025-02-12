@@ -29,7 +29,7 @@ export default function Login() {
         }
       })
       .catch((err) => {
-        console.log(`Unexpected error when fetching (${err})`);
+        console.error(`Unexpected error when fetching (${err})`);
       });
   };
 
@@ -60,15 +60,15 @@ export default function Login() {
         <input
           id="username"
           name="username"
-          value={form.username}
           placeholder="Username"
+          value={form.username}
           onChange={handleChange}
         ></input>
         <input
           id="password"
           name="password"
-          value={form.password}
           placeholder="Password"
+          value={form.password}
           onChange={handleChange}
         ></input>
         <button class="primary" type="submit">
